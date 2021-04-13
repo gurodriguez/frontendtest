@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Route, Switch, HashRouter } from 'react-router-dom';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import HeaderApp from './components/HeaderApp';
+import FooterApp from './components/FooterApp';
+import ProductList from './pages/ProductList';
+import ProductDetail from './pages/ProductDetail';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <CssBaseline />
+      <HashRouter>
+        <HeaderApp />
+        <Switch>
+        <Route exact path="/product-detail" name="Product Detail" render={props => <ProductDetail {...props} />} />
+          <Route exact path="/" name="Home" render={props => <ProductList {...props} />} />
+        </Switch>
+        <FooterApp />
+      </HashRouter>
+    </React.Fragment>
   );
 }
 
