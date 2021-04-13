@@ -33,7 +33,7 @@ create an .env file inside your folder with the next value
 ```sh
 vim .env
 ```
-- REACT_APP_API_URL=<URL To your backend>
+- REACT_APP_API_URL= http://yourbackendURL
 
 Run the code
 ```sh
