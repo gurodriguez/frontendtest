@@ -1,5 +1,5 @@
 # The Shopping Catalog Frontend
-## For testing by Gabriel R.
+## For using under MIT License by Gabriel R.
 
 
 
